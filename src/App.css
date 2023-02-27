@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.container{
   flex-direction: column;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 80vh;
 }
 
-.App-link {
-  color: #61dafb;
+.inputContainer h1{
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 3rem;
+  width: 100%;
+  text-indent: 1rem;
+  color: var(--primary-color);
+  margin-left: 5rem;
+  
 }
 
-@keyframes App-logo-spin {
+.inputContainer section h2 {
+  border-radius: 2rem;
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  margin-left: 0rem;
+}
+
+.inputContainer div{
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.inputContainer input{
+  font-size: 1rem;
+  padding: 0.5rem 0.2rem 0.5rem 0rem;
+  text-indent: 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-indent: 1rem;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.inputContainer button{
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  height: 3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+
+.inputContainer input::placeholder {
+  color: black;
+  font-size: 1rem;
+}
+
+/* Results */
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.result p {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  margin-right: 1rem;
+}
+
+.result button{
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+.result button.copied {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+.noData{
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Background Animation */
+@keyframes cube {
   from {
-    transform: rotate(0deg);
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
   }
   to {
-    transform: rotate(360deg);
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
   }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #0078c2;
+  overflow: hidden;
+  z-index: -1;
+}
+.background li {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #006cae;
+  color: transparent;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 11s ease-in forwards infinite;
+}
+undefined
+.background li:nth-child(0) {
+  animation-delay: 0s;
+  left: 66vw;
+  top: 70vh;
+}
+
+.background li:nth-child(1) {
+  animation-delay: 2s;
+  left: 4vw;
+  top: 28vh;
+}
+
+.background li:nth-child(2) {
+  animation-delay: 4s;
+  left: 46vw;
+  top: 64vh;
+}
+
+.background li:nth-child(3) {
+  animation-delay: 6s;
+  left: 59vw;
+  top: 79vh;
+}
+
+.background li:nth-child(4) {
+  animation-delay: 8s;
+  left: 82vw;
+  top: 20vh;
+  border-color: #0084d5;
+}
+
+.background li:nth-child(5) {
+  animation-delay: 10s;
+  left: 34vw;
+  top: 88vh;
+  border-color: #0084d5;
+}
+
+.background li:nth-child(6) {
+  animation-delay: 12s;
+  left: 74vw;
+  top: 57vh;
+}
+
+.background li:nth-child(7) {
+  animation-delay: 14s;
+  left: 9vw;
+  top: 52vh;
+  border-color: #0084d5;
+}
+
+.background li:nth-child(8) {
+  animation-delay: 16s;
+  left: 50vw;
+  top: 47vh;
+  border-color: #0084d5;
+}
+
+.background li:nth-child(9) {
+  animation-delay: 18s;
+  left: 98vw;
+  top: 98vh;
+  border-color: #0084d5;
+}
+
+.background li:nth-child(10) {
+  animation-delay: 20s;
+  left: 27vw;
+  top: 40vh;
+  border-color: #0084d5;
+}
+
+.background li:nth-child(11) {
+  animation-delay: 22s;
+  left: 22vw;
+  top: 86vh;
+  border-color: #0084d5;
+}
+
+.background li:nth-child(12) {
+  animation-delay: 24s;
+  left: 79vw;
+  top: 6vh;
+}
+
+.background li:nth-child(13) {
+  animation-delay: 26s;
+  left: 15vw;
+  top: 36vh;
+  border-color: #0084d5;
+}
+
+.background li:nth-child(14) {
+  animation-delay: 28s;
+  left: 93vw;
+  top: 17vh;
+}
+
+.background li:nth-child(15) {
+  animation-delay: 30s;
+  left: 43vw;
+  top: 4vh;
+  border-color: #0084d5;
 }
