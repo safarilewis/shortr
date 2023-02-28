@@ -7,15 +7,16 @@ This a free to use link shortener. It was built using React and CSS. It uses [ax
 You will need to have the following already installed to run the project:
 
 - NodeJS
-- Axios
 
-## Available Scripts
+## Running the Project
 
-In the project directory, you can run:
+Once in the project directory, you can run:
+
+### `npm install`
+- This will install all required dependencies to run the project
 
 ### `npm start`
 - This will start the application on a local development server and can be accessed at http://localhost:3000
-
 
 
 [1]: https://www.npmjs.com/package/axios
