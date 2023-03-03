@@ -13,7 +13,7 @@ const LinkResult = ({ inputValue }) => {
     const [error, setError] = useState(false);
 
 
-    const fetchData = async () => {
+    const fetchDat = async () => {
         try {
             setLoading(true);
             const res = await axios(`https://api.shrtco.de/v2/shorten?url=${inputValue}`);
@@ -28,7 +28,7 @@ const LinkResult = ({ inputValue }) => {
 
     useEffect(() => {
         if (inputValue.length) {
-            fetchData();
+            fetchDat();
         }
     }, [inputValue]);
 
