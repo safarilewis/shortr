@@ -12,7 +12,8 @@ const LinkResult = ({ inputValue }) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
-    useEffect(()=>{
+    
+    useEffect(() => {
         const fetchData = async () => {
             try {
                 setLoading(true);
@@ -25,10 +26,7 @@ const LinkResult = ({ inputValue }) => {
                 setLoading(false);
             }
         }
-    })
-    
 
-    useEffect(() => {
         if (inputValue.length) {
             fetchData();
         }
