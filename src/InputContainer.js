@@ -9,7 +9,7 @@ const InputContainer = ({ setInputValue }) => {
     }
     return (
         <div className='inputContainer'>
-            <h1>Shortn</h1>
+            <h1>Shortr</h1>
             <section className="inputText"><h2>Free URL shortener</h2>
                 <div className="inputBox">
                     <input
